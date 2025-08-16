@@ -16,7 +16,7 @@
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
     <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-xl">
-        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">FORMULIR PENDAFTARAN KTA GEMA DESA PAMEKASAN</h1>
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Formulir Pendaftaran</h1>
         
         <!-- Formulir Pendaftaran -->
         <form id="registrationForm" class="space-y-4">
@@ -120,8 +120,9 @@
             // URL dari Google Apps Script Web App Anda
             // GANTI DENGAN URL DEPLOYMENT GOOGLE APPS SCRIPT ANDA
             const googleAppsScriptURL = 'https://script.google.com/macros/s/AKfycbwjhRbGx0na_CG7egitRB1DAM81KdKfywN1zMhLAEWC2EdYu_NRyw0NmyNC9msX9qYlkw/exec'; 
+            console.log("URL Google Apps Script yang digunakan:", googleAppsScriptURL); // Tambahkan baris ini
 
-            if (googleAppsScriptURL === 'https://script.google.com/macros/s/AKfycbwjhRbGx0na_CG7egitRB1DAM81KdKfywN1zMhLAEWC2EdYu_NRyw0NmyNC9msX9qYlkw/exec') {
+            if (googleAppsScriptURL === 'GANTI_DENGAN_URL_ANDA') {
                 statusMessage.textContent = 'Harap ganti URL Google Apps Script di dalam kode JavaScript.';
                 statusMessage.className = 'text-center text-sm font-medium text-red-600';
                 return;
@@ -187,6 +188,3 @@
     </script>
 </body>
 </html>
-
-
-
