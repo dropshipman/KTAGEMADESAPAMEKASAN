@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-xl">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">FORMULIR PENDAFTARAN KTA GEMA DESA PAMEKASAN</h1>
+        
+        <!-- Formulir Pendaftaran -->
+        <form id="registrationForm" class="space-y-4">
+            <!-- Nama Lengkap -->
+            <div>
+                <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Jenis Kelamin -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
+                <div class="mt-1 flex space-x-4">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="jenisKelamin" value="Laki-laki" class="form-radio text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-gray-700">Laki-laki</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="jenisKelamin" value="Perempuan" class="form-radio text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-gray-700">Perempuan</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Tempat dan Tanggal Lahir -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label for="tempatLahir" class="block text-sm font-medium text-gray-700">Tempat Lahir</label>
+                    <input type="text" id="tempatLahir" name="tempatLahir" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="tanggalLahir" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+                    <input type="date" id="tanggalLahir" name="tanggalLahir" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+            </div>
+
+            <!-- NIK -->
+            <div>
+                <label for="nik" class="block text-sm font-medium text-gray-700">NIK</label>
+                <input type="text" id="nik" name="nik" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- RT / RW -->
+            <div>
+                <label for="rtRw" class="block text-sm font-medium text-gray-700">RT / RW</label>
+                <input type="text" id="rtRw" name="rtRw" placeholder="Contoh: 001/002" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Alamat Lengkap -->
+            <div>
+                <label for="alamatLengkap" class="block text-sm font-medium text-gray-700">Alamat Lengkap</label>
+                <textarea id="alamatLengkap" name="alamatLengkap" rows="3" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+            </div>
+
+            <!-- Nama Ibu Kandung -->
+            <div>
+                <label for="namaIbu" class="block text-sm font-medium text-gray-700">Nama Ibu Kandung</label>
+                <input type="text" id="namaIbu" name="namaIbu" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- No Handphone -->
+            <div>
+                <label for="noHp" class="block text-sm font-medium text-gray-700">No Handphone</label>
+                <input type="tel" id="noHp" name="noHp" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Unggah Foto KTP -->
+            <div>
+                <label for="fotoKtp" class="block text-sm font-medium text-gray-700">Foto KTP</label>
+                <input type="file" id="fotoKtp" name="fotoKtp" accept="image/*" required class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+            </div>
+
+            <!-- Unggah Pas Foto 3x4 -->
+            <div>
+                <label for="pasFoto" class="block text-sm font-medium text-gray-700">Pas Foto 3 x 4</label>
+                <input type="file" id="pasFoto" name="pasFoto" accept="image/*" required class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+            </div>
+            
+            <div id="statusMessage" class="text-center text-sm font-medium"></div>
+
+            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition ease-in-out duration-150">
+                Kirim
+            </button>
+        </form>
+    </div>
+
+    <!-- Skrip JavaScript -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Mencegah pengiriman formulir default
+
+            const form = event.target;
+            const statusMessage = document.getElementById('statusMessage');
+
+            // URL dari Google Apps Script Web App Anda
+            // GANTI DENGAN URL DEPLOYMENT GOOGLE APPS SCRIPT ANDA
+            const googleAppsScriptURL = 'https://script.google.com/macros/s/AKfycbwFeohvFk0CQ0W2mnsFzMAPbr5IwQvqkQCbPq0qIpRbIA16DDoKiNIuBBVc4Y0E0ILUzQ/exec'; 
+
+            if (googleAppsScriptURL === 'https://script.google.com/macros/s/AKfycbwFeohvFk0CQ0W2mnsFzMAPbr5IwQvqkQCbPq0qIpRbIA16DDoKiNIuBBVc4Y0E0ILUzQ/exec') {
+                statusMessage.textContent = 'Harap ganti URL Google Apps Script di dalam kode JavaScript.';
+                statusMessage.className = 'text-center text-sm font-medium text-red-600';
+                return;
+            }
+
+            statusMessage.textContent = 'Mengirim...';
+            statusMessage.className = 'text-center text-sm font-medium text-gray-600';
+
+            try {
+                // Siapkan data formulir
+                const formData = new FormData(form);
+                const data = {};
+                for (let [key, value] of formData.entries()) {
+                    data[key] = value;
+                }
+
+                // Fungsi untuk membaca file dan mengonversinya menjadi Base64
+                const toBase64 = file => new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => resolve(reader.result.split(',')[1]);
+                    reader.onerror = error => reject(error);
+                });
+
+                // Proses unggahan foto KTP
+                const fotoKtpFile = document.getElementById('fotoKtp').files[0];
+                if (fotoKtpFile) {
+                    data.fotoKtp = await toBase64(fotoKtpFile);
+                    data.fotoKtpFileName = fotoKtpFile.name;
+                    data.fotoKtpMimeType = fotoKtpFile.type;
+                }
+
+                // Proses unggahan Pas Foto
+                const pasFotoFile = document.getElementById('pasFoto').files[0];
+                if (pasFotoFile) {
+                    data.pasFoto = await toBase64(pasFotoFile);
+                    data.pasFotoFileName = pasFotoFile.name;
+                    data.pasFotoMimeType = pasFotoFile.type;
+                }
+
+                const response = await fetch(googleAppsScriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' },
+                });
+                
+                const result = await response.json();
+
+                if (result.success) {
+                    statusMessage.textContent = 'Data berhasil dikirim!';
+                    statusMessage.className = 'text-center text-sm font-medium text-green-600';
+                    form.reset(); // Bersihkan formulir setelah berhasil
+                } else {
+                    statusMessage.textContent = `Gagal mengirim data: ${result.message || 'Server error'}`;
+                    statusMessage.className = 'text-center text-sm font-medium text-red-600';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                statusMessage.textContent = 'Terjadi kesalahan saat mengirim formulir.';
+                statusMessage.className = 'text-center text-sm font-medium text-red-600';
+            }
+        });
+    </script>
+</body>
+</html>
